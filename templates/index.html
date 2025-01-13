@@ -1,0 +1,29 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Loan Approval prediction</h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict')}}" method="post">
+         <input type="text" name="person_age" placeholder="person_age" required="required" /><br>
+           <input type="text" name="person_gender" placeholder="person_gender" required="required" /><br>
+           <input type="text" name="person_education" placeholder="person_education" required="required" /><br>
+           <input type="text" name="person_income" placeholder="person_income" required="required" /><br>
+           <input type="text" name="person_home_ownership" placeholder="person_home_ownership" required="required" /><br>
+           <input type="text" name="loan_amnt" placeholder="loan_amnt" required="required" /><br>
+           <input type="text" name="loan_intent" placeholder="loan_intent" required="required" /><br>
+           <input type="text" name="loan_int_rate" placeholder="loan_int_rate" required="required" /><br>
+           <input type="text" name="loan_percent_income" placeholder="loan_percent_income" required="required" /><br>
+           <input type="text" name="credit_score" placeholder="credit_score" required="required" /><br>
+           <input type="text" name="previous_loan_defaults_on_file" placeholder="previous_loan_defaults_on_file" required="required" /><br>
+   
+   
+   
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+    <h2>
+       Loan Prediction {{result}}
+    </h2>
+   <body>
+</html>
+
